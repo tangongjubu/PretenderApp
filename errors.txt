@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/adhd_screens.rpy", line 200: The if statement is not a valid child of the textbutton statement.
+    style "selected_duration_button" if show_custom else "duration_button"
+                                       ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Thu Dec 19 23:30:28 2024

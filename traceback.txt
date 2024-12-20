@@ -1,0 +1,88 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 267, in script
+    $ renpy.pause(hard=True)
+  File "game/script.rpy", line 267, in <module>
+    $ renpy.pause(hard=True)
+  File "game/adhd_screens.rpy", line 164, in execute
+    screen adhd_settings():
+  File "game/adhd_screens.rpy", line 164, in execute
+    screen adhd_settings():
+  File "game/adhd_screens.rpy", line 166, in execute
+    frame:
+  File "game/adhd_screens.rpy", line 171, in execute
+    vbox:
+  File "game/adhd_screens.rpy", line 176, in execute
+    hbox:
+  File "game/adhd_screens.rpy", line 179, in execute
+    for duration in [10, 20, 30]:
+  File "game/adhd_screens.rpy", line 180, in execute
+    if persistent.ad_duration == duration:
+  File "game/adhd_screens.rpy", line 189, in execute
+    textbutton "[duration]秒":
+  File "game/adhd_screens.rpy", line 189, in keywords
+    textbutton "[duration]秒":
+  File "game/adhd_screens.rpy", line 192, in <module>
+    If(adhd_state is not None, SetField(adhd_state, "ad_duration", duration)),
+NameError: name 'adhd_state' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 267, in script
+    $ renpy.pause(hard=True)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 267, in <module>
+    $ renpy.pause(hard=True)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 194, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay, pause_modal=modal)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "F:\Project\Renpy\renpy-8.3.4-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/adhd_screens.rpy", line 164, in execute
+    screen adhd_settings():
+  File "game/adhd_screens.rpy", line 164, in execute
+    screen adhd_settings():
+  File "game/adhd_screens.rpy", line 166, in execute
+    frame:
+  File "game/adhd_screens.rpy", line 171, in execute
+    vbox:
+  File "game/adhd_screens.rpy", line 176, in execute
+    hbox:
+  File "game/adhd_screens.rpy", line 179, in execute
+    for duration in [10, 20, 30]:
+  File "game/adhd_screens.rpy", line 180, in execute
+    if persistent.ad_duration == duration:
+  File "game/adhd_screens.rpy", line 189, in execute
+    textbutton "[duration]秒":
+  File "game/adhd_screens.rpy", line 189, in keywords
+    textbutton "[duration]秒":
+  File "game/adhd_screens.rpy", line 192, in <module>
+    If(adhd_state is not None, SetField(adhd_state, "ad_duration", duration)),
+NameError: name 'adhd_state' is not defined
+
+Windows-10-10.0.19041 AMD64
+Ren'Py 8.3.4.24120703
+Pretender 1.0
+Fri Dec 20 00:41:50 2024
